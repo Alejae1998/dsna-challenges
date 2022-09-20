@@ -62,4 +62,10 @@ describe('primitive code challenges', () => {
     expect(multiplesOfN(25)).toEqual([25, 50]);
     expect(multiplesOfN(75)).toEqual([]);
   });
+
+  //HIGHER ORDER FUNCTIONS 
+  it('should return an array with parameter element first', ()  => {
+    const addPink  = addFirst('pink');
+    expect(addPink(['orange', 'blue', 'green'])).toStrictEqual(['pink', 'orange', 'blue', 'green']);
+  });
 });
