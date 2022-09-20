@@ -68,4 +68,10 @@ describe('primitive code challenges', () => {
     const addPink  = addFirst('pink');
     expect(addPink(['orange', 'blue', 'green'])).toStrictEqual(['pink', 'orange', 'blue', 'green']);
   });
+  //recursive functions 
+  it('should calculate the sum of digits in the number, and keep adding', () => {
+    expect(rootDigit(123)).toBe(6);
+    expect(rootDigit(4322)).toBe(2);
+    expect(rootDigit(999888777)).toBe(9);
+  });
 });
