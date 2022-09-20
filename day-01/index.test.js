@@ -4,7 +4,8 @@ const {
   oddishOrEvenish,
   at,
   anagrams,
-  fizzBuzz
+  fizzBuzz, 
+  multiplesOfN,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -53,5 +54,10 @@ describe('primitive code challenges', () => {
       'FizzBuzz',
       16,
     ]);
+  });
+  it('should return an array with numbers 1-50 that are multiples of n', () => {
+    expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+    expect(multiplesOfN(25)).toEqual([25, 50]);
+    expect(multiplesOfN(75)).toEqual([]);
   });
 });
