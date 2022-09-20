@@ -4,6 +4,7 @@ const {
   oddishOrEvenish,
   at,
   anagrams,
+  fizzBuzz
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -32,5 +33,25 @@ describe('primitive code challenges', () => {
   it('should identify strings that are anagrams', () => {
     expect(anagrams('superintended', 'unpredestined')).toBe(true);
     expect(anagrams('pictorialness', 'documentarily')).toBe(false);
+  });
+  it('should return a list of numbers from 1-parameter, where divisible by 3 and 5, replace with FizzBuzz, where divisible by 3 replace with Fizz, where divisible by 5 replace with Buzz', () => {
+    expect(fizzBuzz(16)).toEqual([
+      1,
+      2,
+      'Fizz',
+      4,
+      'Buzz',
+      'Fizz',
+      7,
+      8,
+      'Fizz',
+      'Buzz',
+      11,
+      'Fizz',
+      13,
+      14,
+      'FizzBuzz',
+      16,
+    ]);
   });
 });
