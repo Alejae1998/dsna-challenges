@@ -80,6 +80,26 @@ function multiplesOfN(n) {
   }
   return arr;
 }
+
+
+
+function addFirst(element){
+  return function addElement(arr){
+    arr.unshift(element);
+    return arr;
+  };
+}
+
+function rootDigit(number){
+  const digits = number.toString().split('');
+  const numbers = digits.map(d => +d);
+  const sum = numbers.reduce((a, b) => a + b);
+  if(sum > 9) {
+    return rootDigit(sum);
+  } else {
+    return sum;
+  }
+}
 module.exports = {
   reverseSentence,
   titleCase,
@@ -88,4 +108,6 @@ module.exports = {
   anagrams,
   fizzBuzz,
   multiplesOfN,
+  addFirst,
+  rootDigit
 };

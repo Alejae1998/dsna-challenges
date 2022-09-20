@@ -6,6 +6,8 @@ const {
   anagrams,
   fizzBuzz, 
   multiplesOfN,
+  addFirst,
+  rootDigit,
 } = require('./index');
 
 describe('primitive code challenges', () => {
